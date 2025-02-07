@@ -1,0 +1,34 @@
+import java.math.BigInteger;
+public class Calculations {
+	
+	public Calculations() {
+		
+	}
+	public BigInteger doFactorial(int num) {
+		BigInteger answer = BigInteger.ONE;
+		for(int i = num; i > 0; i--) {
+			answer = answer.multiply(BigInteger.valueOf(i));
+		}
+		return answer;
+	}
+	
+	public BigInteger doPermutation(int n, int r) {
+		return doFactorial(n).divide(doFactorial(n - r));
+	}
+	
+	public BigInteger doCombination(int n, int r) {
+		return doFactorial(n).divide(doFactorial(r).multiply(doFactorial(n - r)));
+	}
+}
+
+
+public class Tester {
+
+	public static void main(String[] args) {
+		Calculations calc = new Calculations();
+		System.out.println(calc.doPermutation(10, 3));
+		System.out.println(calc.doCombination(10, 3));
+
+	}
+
+}
