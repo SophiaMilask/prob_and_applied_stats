@@ -28,7 +28,7 @@ public class Tester {
 		Calculations calc = new Calculations();
 		System.out.println(calc.doPermutation(10, 3));
 		System.out.println(calc.doCombination(10, 3));
-
+//Hello my name is anissa
 	}
 
 }
